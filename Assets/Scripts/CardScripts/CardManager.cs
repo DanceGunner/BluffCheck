@@ -48,25 +48,27 @@ public class CardManager : MonoBehaviour
     public void StartNextRound()
     {
         Console.WriteLine(cardsInGame.Count);
-        string cardpath = "Assets/Resources/TempCardImages/";
         List<Sprite> cards;
+        // for each case you will want to set the cards list to be the desired cards for the game
+        // in this order player left card, player right card, opponent left card, opponnent right,
+        // field cards from left to right. case 1 will be the first game and so on.
         switch (roundNum)
         {
             case 0:
-                cards = new List<Sprite> { cardSprites["club10"], cardSprites["club9"], cardSprites["clubA"],
-                                           cardSprites["heartA"], cardSprites["spadeK"], cardSprites["heart10"],
+                cards = new List<Sprite> { cardSprites["club10"], cardSprites["club9"], cardSprites["spadeK"],
+                                           cardSprites["heartA"], cardSprites["clubA"], cardSprites["heart10"],
                                            cardSprites["spade5"], cardSprites["heart9"], cardSprites["spade9"], };
                 SetUpRound(cards);
                 break;
             case 1:
-                cards = new List<Sprite> { cardSprites["club10"], cardSprites["club9"], cardSprites["clubA"],
-                                           cardSprites["heartA"], cardSprites["spadeK"], cardSprites["heart10"],
+                cards = new List<Sprite> {  cardSprites["club10"], cardSprites["club9"], cardSprites["spadeK"],
+                                           cardSprites["heartA"], cardSprites["clubA"], cardSprites["heart10"],
                                            cardSprites["spade5"], cardSprites["heart9"], cardSprites["spade9"], };
                 SetUpRound(cards);
                 break;
             case 2:
-                cards = new List<Sprite> { cardSprites["club10"], cardSprites["club9"], cardSprites["clubA"],
-                                           cardSprites["heartA"], cardSprites["spadeK"], cardSprites["heart10"],
+                cards = new List<Sprite> { cardSprites["club10"], cardSprites["club9"], cardSprites["spadeK"],
+                                           cardSprites["heartA"], cardSprites["clubA"], cardSprites["heart10"],
                                            cardSprites["spade5"], cardSprites["heart9"], cardSprites["spade9"], };
                 SetUpRound(cards);
                 break;
@@ -96,6 +98,7 @@ public class CardManager : MonoBehaviour
                 break;
             case 5:
                 StartNextRound();
+                roundStage = -1;
                 break;
         }
         roundStage++;
@@ -135,16 +138,16 @@ public class CardManager : MonoBehaviour
     static Dictionary<string, Sprite> LoadCardSprites()
     {
         Dictionary<string, Sprite> tempCards = new Dictionary<string, Sprite>();
-        string cardpath = "Assets/Resources/TempCardImages/";
-        tempCards.Add("club10" ,Resources.Load<Sprite>("Assets/Resources/TempCardImages/cardClubs_10.png"));
-        tempCards.Add("club9" ,Resources.Load<Sprite>(cardpath + "cardClubs_9.png"));
-        tempCards.Add("heartA" ,Resources.Load<Sprite>(cardpath + "cardHearts_A.png"));
-        tempCards.Add("spadeK" ,Resources.Load<Sprite>(cardpath + "cardSpades_K.png"));
-        tempCards.Add("clubA" ,Resources.Load<Sprite>(cardpath + "cardClubs_A.png"));
-        tempCards.Add("heart10" ,Resources.Load<Sprite>(cardpath + "cardHearts_10.png"));
-        tempCards.Add("spade5" ,Resources.Load<Sprite>(cardpath + "cardSpades_5.png"));
-        tempCards.Add("heart9" ,Resources.Load<Sprite>(cardpath + "cardHearts_9.png"));
-        tempCards.Add("spade9" ,Resources.Load<Sprite>(cardpath + "cardSpades_9.png"));
+        string cardpath = "TempCardImages/";
+        tempCards.Add("club10" ,Resources.Load<Sprite>("cardClubs_10"));
+        tempCards.Add("club9" ,Resources.Load<Sprite>(cardpath + "cardClubs_9"));
+        tempCards.Add("heartA" ,Resources.Load<Sprite>(cardpath + "cardHearts_A"));
+        tempCards.Add("spadeK" ,Resources.Load<Sprite>(cardpath + "cardSpades_K"));
+        tempCards.Add("clubA" ,Resources.Load<Sprite>(cardpath + "cardClubs_A"));
+        tempCards.Add("heart10" ,Resources.Load<Sprite>(cardpath + "cardHearts_10"));
+        tempCards.Add("spade5" ,Resources.Load<Sprite>(cardpath + "cardSpades_5"));
+        tempCards.Add("heart9" ,Resources.Load<Sprite>(cardpath + "cardHearts_9"));
+        tempCards.Add("spade9" ,Resources.Load<Sprite>(cardpath + "cardSpades_9"));
         return tempCards;
         // load in all the cards??
     }
