@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,27 +11,40 @@ public class DialogueManager : MonoBehaviour
     private bool hasChoices = false;
 
     private Dialogue[] choices;
+    
+    private string[] choiceNames;
 
     public Text nameText;
 
     public Text dialogueText;
+
+    public Text raise;
+    public Text check;
+    public Text fold;
 
 
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+        choices = new Dialogue[3];
+        choiceNames = new string[3];
     }
     public void StartDialogue(Dialogue dialogue) {
         Debug.Log("Starting conversation with" + dialogue.name);
 
+        //Reset the state
         nameText.text = dialogue.name;
+
+        Array.Clear(choices, 0, 3);
+        Array.Clear(choiceNames, 0, 3);
 
         sentences.Clear();
 
         if(dialogue.choices.Length> 0) {
             hasChoices = true;
             choices = dialogue.choices;
+            choiceNames = dialogue.choiceNames;
         }
 
         foreach (string sentence in dialogue.sentences) {
@@ -44,6 +58,11 @@ public class DialogueManager : MonoBehaviour
         if(sentences.Count == 0) {
             if(!hasChoices) {
                 EndDialogue();
+            }
+            else {
+                raise.text = choiceNames[0];
+                check.text = choiceNames[1];
+                fold.text = choiceNames[2];
             }
             return;
         }
