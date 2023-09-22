@@ -8,6 +8,8 @@ public class DialogueManager : MonoBehaviour
 {
     private Queue<string> sentences;
 
+    private Queue<string> names;
+
     private bool hasChoices = false;
 
     private Dialogue[] choices;
@@ -27,14 +29,14 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        names = new Queue<string>();
         choices = new Dialogue[3];
         choiceNames = new string[3];
     }
     public void StartDialogue(Dialogue dialogue) {
-        Debug.Log("Starting conversation with" + dialogue.name);
 
         //Reset the state
-        nameText.text = dialogue.name;
+        nameText.text = "";
 
         Array.Clear(choices, 0, 3);
         Array.Clear(choiceNames, 0, 3);
@@ -49,6 +51,10 @@ public class DialogueManager : MonoBehaviour
 
         foreach (string sentence in dialogue.sentences) {
             sentences.Enqueue(sentence);
+        }
+
+        foreach (string name in dialogue.names) {
+            names.Enqueue(name);
         }
 
         DisplayNextSentence();
@@ -68,10 +74,12 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
+        string name = names.Dequeue();
 
 
         Debug.Log(sentence);
         dialogueText.text = sentence;
+        nameText.text = name;
     }
 
     public void EndDialogue() {

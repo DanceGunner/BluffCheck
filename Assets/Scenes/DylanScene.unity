@@ -1421,23 +1421,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Jeffery
+    names:
+    - Jeremy
+    - Jeremy
+    - Jeremy
+    - Deagan
     sentences:
     - Howdy there pardner!
     - This is a test for writing text and stuff that Dylan is doing.
     - Did it work?
+    - Yeah it worked
     choices:
-    - name: Jeffery
+    - names:
+      - Jeremy
       sentences:
       - You chose Raise!
       choices: []
       choiceNames: []
-    - name: Jefffery
+    - names:
+      - Jeremy
       sentences:
       - You chose Check!
       choices: []
       choiceNames: []
-    - name: Jeffery
+    - names:
+      - Jeremy
       sentences:
       - You chose to fold!
       choices: []
@@ -1973,10 +1981,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
+    names: []
     sentences: []
     choices:
-    - name: 
+    - names: []
       sentences: []
       choices: []
       choiceNames: []
