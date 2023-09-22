@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,34 +8,53 @@ public class DialogueManager : MonoBehaviour
 {
     private Queue<string> sentences;
 
+    private Queue<string> names;
+
     private bool hasChoices = false;
 
     private Dialogue[] choices;
+    
+    private string[] choiceNames;
 
     public Text nameText;
 
     public Text dialogueText;
+
+    public Text raise;
+    public Text check;
+    public Text fold;
 
 
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+        names = new Queue<string>();
+        choices = new Dialogue[3];
+        choiceNames = new string[3];
     }
     public void StartDialogue(Dialogue dialogue) {
-        Debug.Log("Starting conversation with" + dialogue.name);
 
-        nameText.text = dialogue.name;
+        //Reset the state
+        nameText.text = "";
+
+        Array.Clear(choices, 0, 3);
+        Array.Clear(choiceNames, 0, 3);
 
         sentences.Clear();
 
         if(dialogue.choices.Length> 0) {
             hasChoices = true;
             choices = dialogue.choices;
+            choiceNames = dialogue.choiceNames;
         }
 
         foreach (string sentence in dialogue.sentences) {
             sentences.Enqueue(sentence);
+        }
+
+        foreach (string name in dialogue.names) {
+            names.Enqueue(name);
         }
 
         DisplayNextSentence();
@@ -45,14 +65,21 @@ public class DialogueManager : MonoBehaviour
             if(!hasChoices) {
                 EndDialogue();
             }
+            else {
+                raise.text = choiceNames[0];
+                check.text = choiceNames[1];
+                fold.text = choiceNames[2];
+            }
             return;
         }
 
         string sentence = sentences.Dequeue();
+        string name = names.Dequeue();
 
 
         Debug.Log(sentence);
         dialogueText.text = sentence;
+        nameText.text = name;
     }
 
     public void EndDialogue() {
