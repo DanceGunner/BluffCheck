@@ -91,13 +91,13 @@ public class CardManager : MonoBehaviour
                 ReveilFieldCardsStage2();
                 break;
             case 3:
-                ReveilFieldCardsStage3();
+                //ReveilFieldCardsStage3();
                 break;
             case 4:
-                ReveilOpponentCards();
+                //ReveilOpponentCards();
                 break;
             case 5:
-                StartNextRound();
+                //StartNextRound();
                 roundStage = -1;
                 break;
         }

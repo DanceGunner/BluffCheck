@@ -1777,18 +1777,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 295470754}
-        m_TargetAssemblyTypeName: CardManager, Assembly-CSharp
-        m_MethodName: ReveilNextcards
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &798753470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1974,6 +1962,7 @@ MonoBehaviour:
   raise: {fileID: 324003365}
   check: {fileID: 1952137620}
   fold: {fileID: 700763824}
+  canvas: {fileID: 295470749}
 --- !u!4 &869112013
 Transform:
   m_ObjectHideFlags: 0
