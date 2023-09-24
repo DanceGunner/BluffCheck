@@ -55,9 +55,9 @@ public class CardManager : MonoBehaviour
         switch (roundNum)
         {
             case 0:
-                cards = new List<Sprite> { cardSprites["club10"], cardSprites["club9"], cardSprites["spadeK"],
-                                           cardSprites["heartA"], cardSprites["clubA"], cardSprites["heart10"],
-                                           cardSprites["spade5"], cardSprites["heart9"], cardSprites["spade9"], };
+                cards = new List<Sprite> { cardSprites["heart2"], cardSprites["spade7"], cardSprites["spadeK"],
+                                           cardSprites["heartA"], cardSprites["diamondA"], cardSprites["clubQ"],
+                                           cardSprites["diamond9"], cardSprites["club2"], cardSprites["spade9"], };
                 SetUpRound(cards);
                 break;
             case 1:
@@ -139,6 +139,7 @@ public class CardManager : MonoBehaviour
     {
         Dictionary<string, Sprite> tempCards = new Dictionary<string, Sprite>();
         string cardpath = "TempCardImages/";
+        string bcCardpath = "BluffCheckCardAssets/";
         tempCards.Add("club10" ,Resources.Load<Sprite>("cardClubs_10"));
         tempCards.Add("club9" ,Resources.Load<Sprite>(cardpath + "cardClubs_9"));
         tempCards.Add("heartA" ,Resources.Load<Sprite>(cardpath + "cardHearts_A"));
@@ -148,6 +149,16 @@ public class CardManager : MonoBehaviour
         tempCards.Add("spade5" ,Resources.Load<Sprite>(cardpath + "cardSpades_5"));
         tempCards.Add("heart9" ,Resources.Load<Sprite>(cardpath + "cardHearts_9"));
         tempCards.Add("spade9" ,Resources.Load<Sprite>(cardpath + "cardSpades_9"));
+        // real game assets
+        tempCards.Add("heart2", Resources.Load<Sprite>(bcCardpath + "Hearts/2ofHearts"));
+        tempCards.Add("spade7", Resources.Load<Sprite>(bcCardpath + "Spades/7ofSpades"));
+        //tempCards.Add("heart2", Resources.Load<Sprite>(bcCardpath + "Hearts/2ofHearts"));
+        //tempCards.Add("heart2", Resources.Load<Sprite>(bcCardpath + "Hearts/2ofHearts"));
+        tempCards.Add("diamondA", Resources.Load<Sprite>(bcCardpath + "Diamonds/AceofDiamonds"));
+        tempCards.Add("clubQ", Resources.Load<Sprite>(bcCardpath + "Clubs/QueenofClubs"));
+        tempCards.Add("diamond9", Resources.Load<Sprite>(bcCardpath + "Diamonds/9ofDiamonds"));
+        tempCards.Add("club2", Resources.Load<Sprite>(bcCardpath + "Clubs/2ofClubs"));
+        //tempCards.Add("heart2", Resources.Load<Sprite>(bcCardpath + "Hearts/2ofHearts"));
         return tempCards;
         // load in all the cards??
     }
