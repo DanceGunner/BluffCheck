@@ -7,10 +7,10 @@ public class Player : MonoBehaviour
     public Card[] hand; 
 
 
-    public void InitializePlayer(string playerName, int startingChips, Card[] hand)
+    public Player(string name, int startingChips, Card[] startHand)
     {
-        this.playerName = playerName;
+        this.playerName = name;
         this.chips = startingChips;
-        this.hand = hand;
+        this.hand = startHand;
     }
 }
