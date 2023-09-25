@@ -40,8 +40,8 @@ public class CardManager : MonoBehaviour
     {
         for (int i = 0; i < cardsInGame.Count; i++)
         {
-            cardsInGame[i].GetComponent<IndividualCardScript>().FlipToBack();
-            cardsInGame[i].GetComponent<IndividualCardScript>().cardFront = cardsForRound[i];
+            cardsInGame[i].GetComponent<Card>().FlipToBack();
+            cardsInGame[i].GetComponent<Card>().cardFront = cardsForRound[i];
         }
     }
 
@@ -106,31 +106,31 @@ public class CardManager : MonoBehaviour
 
     void ReveilPlayerCards()
     {
-        playerCard1.GetComponent<IndividualCardScript>().FlipToFront();
-        playerCard2.GetComponent<IndividualCardScript>().FlipToFront();
+        playerCard1.GetComponent<Card>().FlipToFront();
+        playerCard2.GetComponent<Card>().FlipToFront();
     }
 
     void ReveilOpponentCards()
     {
-        opponentCard1.GetComponent<IndividualCardScript>().FlipToFront();
-        opponentCard2.GetComponent<IndividualCardScript>().FlipToFront();
+        opponentCard1.GetComponent<Card>().FlipToFront();
+        opponentCard2.GetComponent<Card>().FlipToFront();
     }
 
     void ReveilFieldCardsStage1()
     {
-        fieldCard1.GetComponent<IndividualCardScript>().FlipToFront();
-        fieldCard2.GetComponent<IndividualCardScript>().FlipToFront();
-        fieldCard3.GetComponent<IndividualCardScript>().FlipToFront();
+        fieldCard1.GetComponent<Card>().FlipToFront();
+        fieldCard2.GetComponent<Card>().FlipToFront();
+        fieldCard3.GetComponent<Card>().FlipToFront();
     }
 
     void ReveilFieldCardsStage2()
     {
-        fieldCard4.GetComponent<IndividualCardScript>().FlipToFront();
+        fieldCard4.GetComponent<Card>().FlipToFront();
     }
 
     void ReveilFieldCardsStage3()
     {
-        fieldCard5.GetComponent<IndividualCardScript>().FlipToFront();
+        fieldCard5.GetComponent<Card>().FlipToFront();
     }
 
 

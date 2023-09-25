@@ -1,17 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<Player> players;
+    public List<Card> communityCards;
+
+    private int currentBettingRound;
+    private int currentBet;
+    private int communityPot;
+
+    private void Start()
     {
-        
+        InitializeGame();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void InitializeGame()
+    {
+        // Initialize game state here (e.g., set up players, deal hole cards, set blinds, etc.)
+
+    }
+
+    public void ProcessPlayerAction(PlayerAction action)
     {
         
     }
