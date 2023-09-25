@@ -2976,8 +2976,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26.176, y: 26.1244}
-  m_SizeDelta: {x: 14.9722, y: 14.9149}
+  m_AnchoredPosition: {x: -18.5, y: 26.1244}
+  m_SizeDelta: {x: 30, y: 14.9149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1485067718
 MonoBehaviour:
@@ -3271,8 +3271,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
-    m_FontStyle: 0
+    m_FontSize: 14
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -3300,7 +3300,7 @@ RectTransform:
   m_GameObject: {fileID: 1629519754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1485067717}
@@ -3308,7 +3308,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.000015258789}
-  m_SizeDelta: {x: 14.4045, y: 16.6484}
+  m_SizeDelta: {x: 150, y: 16.6484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1734552272
 GameObject:
