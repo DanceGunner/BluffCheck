@@ -77,24 +77,24 @@ public class CardManager : MonoBehaviour
         roundStage = 0;
     }
 
-    public void ReveilNextcards()
+    public void RevealNextcards()
     {
         switch (roundStage)
         {
             case 0:
-                ReveilPlayerCards();
+                RevealPlayerCards();
                 break; 
             case 1:
-                ReveilFieldCardsStage1();
+                RevealFieldCardsStage1();
                 break; 
             case 2:
-                ReveilFieldCardsStage2();
+                RevealFieldCardsStage2();
                 break;
             case 3:
-                //ReveilFieldCardsStage3();
+                RevealFieldCardsStage3();
                 break;
             case 4:
-                //ReveilOpponentCards();
+                RevealOpponentCards();
                 break;
             case 5:
                 //StartNextRound();
@@ -104,31 +104,31 @@ public class CardManager : MonoBehaviour
         roundStage++;
     }
 
-    void ReveilPlayerCards()
+    void RevealPlayerCards()
     {
         playerCard1.GetComponent<IndividualCardScript>().FlipToFront();
         playerCard2.GetComponent<IndividualCardScript>().FlipToFront();
     }
 
-    void ReveilOpponentCards()
+    void RevealOpponentCards()
     {
         opponentCard1.GetComponent<IndividualCardScript>().FlipToFront();
         opponentCard2.GetComponent<IndividualCardScript>().FlipToFront();
     }
 
-    void ReveilFieldCardsStage1()
+    void RevealFieldCardsStage1()
     {
         fieldCard1.GetComponent<IndividualCardScript>().FlipToFront();
         fieldCard2.GetComponent<IndividualCardScript>().FlipToFront();
         fieldCard3.GetComponent<IndividualCardScript>().FlipToFront();
     }
 
-    void ReveilFieldCardsStage2()
+    void RevealFieldCardsStage2()
     {
         fieldCard4.GetComponent<IndividualCardScript>().FlipToFront();
     }
 
-    void ReveilFieldCardsStage3()
+    void RevealFieldCardsStage3()
     {
         fieldCard5.GetComponent<IndividualCardScript>().FlipToFront();
     }
