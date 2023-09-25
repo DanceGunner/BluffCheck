@@ -9,6 +9,16 @@ public class Card : MonoBehaviour
     // 2 - Diamonds
     // 3 - Clubs
     private int suit;
+    public Sprite cardBack;
+    public Sprite cardFront;
+    private Sprite currentFace;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        currentFace = GetComponent<Image>().sprite;
+        FlipToBack();
+    }
 
     public Card(int value, int suit)
     {
