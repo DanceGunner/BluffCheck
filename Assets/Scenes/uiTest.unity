@@ -2499,12 +2499,8 @@ MonoBehaviour:
   dialogue:
     names:
     - Daegan Fox Manns
-    - Jeffery
-    - Jeffery
     sentences:
     - Question Chet about his Relationship to Charles
-    - This is a test for writing text and stuff that Dylan is doing.
-    - Did it work?
     choices:
     - names:
       - Daegon Fox Manns
