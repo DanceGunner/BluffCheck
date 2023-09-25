@@ -25,4 +25,14 @@ public class Card : MonoBehaviour
     {
         return this.suit;
     }
+
+    public void FlipToFront()
+    {
+        GetComponent<Image>().sprite = cardFront;
+    }
+
+    public void FlipToBack()
+    {
+        GetComponent<Image>().sprite = cardBack;
+    }
 }
