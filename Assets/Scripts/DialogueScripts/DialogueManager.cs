@@ -68,7 +68,7 @@ public class DialogueManager : MonoBehaviour
                 EndDialogue();
             }
             else {
-                canvas.GetComponent<CardManager>().ReveilNextcards();
+                canvas.GetComponent<CardManager>().RevealNextcards();
                 raise.text = choiceNames[0];
                 check.text = choiceNames[1];
                 fold.text = choiceNames[2];
