@@ -24,6 +24,8 @@ public class DialogueManager : MonoBehaviour
     public Text check;
     public Text fold;
 
+    public Button button;
+
     public GameObject canvas;
 
 
@@ -59,6 +61,7 @@ public class DialogueManager : MonoBehaviour
             names.Enqueue(name);
         }
 
+        button.onClick.AddListener(DisplayNextSentence);
         DisplayNextSentence();
     }
 
@@ -68,7 +71,7 @@ public class DialogueManager : MonoBehaviour
                 EndDialogue();
             }
             else {
-                canvas.GetComponent<CardManager>().ReveilNextcards();
+                canvas.GetComponent<CardManager>().RevealNextcards();
                 raise.text = choiceNames[0];
                 check.text = choiceNames[1];
                 fold.text = choiceNames[2];

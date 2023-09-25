@@ -6,9 +6,13 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
+    private bool started;
+
     public void TriggerDialogue()  {
         DialogueManager manager = FindObjectOfType<DialogueManager>();
-        //manager.SetActive(true);
-        manager.StartDialogue(dialogue);
+        if(!started) {
+            manager.StartDialogue(dialogue);
+            started = true;
+        }
     }
 }
