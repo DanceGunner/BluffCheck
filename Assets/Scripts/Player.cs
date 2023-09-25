@@ -1,14 +1,5 @@
 using UnityEngine;
 
-public enum PlayerAction
-{
-    Fold,
-    Check,
-    Bet,
-    Call,
-    Raise
-}
-
 public class Player : MonoBehaviour
 {
     public string playerName;
@@ -16,10 +7,10 @@ public class Player : MonoBehaviour
     public Card[] hand; 
 
 
-    public void InitializePlayer(string playerName, int startingChips)
+    public void InitializePlayer(string playerName, int startingChips, Card[] hand)
     {
         this.playerName = playerName;
         this.chips = startingChips;
-        hand = new Card[] { new Card(2, CardSuit.Hearts), new Card(7, CardSuit.Spades) };
+        this.hand = hand;
     }
 }

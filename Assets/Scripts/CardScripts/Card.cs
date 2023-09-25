@@ -1,20 +1,16 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public enum CardSuit
-{
-    Hearts,
-    Diamonds,
-    Clubs,
-    Spades
-}
-
 public class Card : MonoBehaviour
 {
     private int value;
-    private CardSuit suit;
+    // 0 - Hearts
+    // 1 - Spades
+    // 2 - Diamonds
+    // 3 - Clubs
+    private int suit;
 
-    public Card(int value, CardSuit suit)
+    public Card(int value, int suit)
     {
         this.value = value;
         this.suit = suit;
@@ -25,7 +21,7 @@ public class Card : MonoBehaviour
         return this.value;
     }
 
-    public CardSuit getSuit()
+    public int getSuit()
     {
         return this.suit;
     }
