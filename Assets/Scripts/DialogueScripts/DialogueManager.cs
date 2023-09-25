@@ -24,6 +24,8 @@ public class DialogueManager : MonoBehaviour
     public Text check;
     public Text fold;
 
+    public GameObject canvas;
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +68,7 @@ public class DialogueManager : MonoBehaviour
                 EndDialogue();
             }
             else {
+                canvas.GetComponent<CardManager>().ReveilNextcards();
                 raise.text = choiceNames[0];
                 check.text = choiceNames[1];
                 fold.text = choiceNames[2];

@@ -97,7 +97,7 @@ public class CardManager : MonoBehaviour
                 RevealOpponentCards();
                 break;
             case 5:
-                StartNextRound();
+                //StartNextRound();
                 roundStage = -1;
                 break;
         }
