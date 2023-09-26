@@ -2585,16 +2585,16 @@ MonoBehaviour:
     names:
     - Daegan Fox Manns
     sentences:
-    - Question Chet about his Relationship to Charles
+    - Question Chet about his relationship to Charles
     choices:
     - names:
-      - Daegon Fox Manns
+      - Daegan Fox Manns
       - Chet
-      - Daegon Fox Manns
+      - Daegan Fox Manns
       - Chet
       sentences:
-      - I heard your brother bit it like a shark on chum day. I bet your pretty broken
-        up.
+      - I heard your brother bit it like a shark on chum day. I bet you're pretty
+        broken up.
       - "Broken up? Look, pal, I\u2019m no Humpty Dumpty. You push me off a wall
         and I stay together.\r"
       - "You\u2019re telling me your brother died and you\u2019re not the least bit
@@ -2602,9 +2602,9 @@ MonoBehaviour:
       - "Not in the slightest bub.\r"
       choices:
       - names:
-        - Daegon Fox Manns
+        - Daegan Fox Manns
         - Chet
-        - Daegon Fox Manns
+        - Daegan Fox Manns
         - Chet
         sentences:
         - "Oh? The two of you weren\u2019t very close then huh?"
@@ -2616,9 +2616,9 @@ MonoBehaviour:
         choices: []
         choiceNames: []
       - names:
-        - Daegon Fox Manns
+        - Daegan Fox Manns
         - Chet
-        - Daegon Fox Manns
+        - Daegan Fox Manns
         - Chet
         sentences:
         - "Oh? The two of you weren\u2019t very close then huh?"
@@ -2669,11 +2669,11 @@ MonoBehaviour:
         choices: []
         choiceNames: []
       choiceNames:
-      - Takes a real heartless son of a bitch to feels such animosity.
+      - Takes a real heartless son of a bitch to feel such animosity.
       - "Oh? The two of you weren\u2019t very close then huh?"
       - 'Easy tiger. I surrender. '
     - names:
-      - Daegon Fox Manns
+      - Daegan Fox Manns
       sentences:
       - You chose to Check!
       choices: []
