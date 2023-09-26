@@ -2521,7 +2521,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 295470754}
         m_TargetAssemblyTypeName: CardManager, Assembly-CSharp
-        m_MethodName: ReveilNextcards
+        m_MethodName: RevealNextcards
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4599,7 +4599,7 @@ Transform:
   m_GameObject: {fileID: 2065918601}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.670719, y: 49.350407, z: 0.0201}
+  m_LocalPosition: {x: 9.44, y: 49.63, z: 0.0201}
   m_LocalScale: {x: 0.6511566, y: 0.6511566, z: 0.6511566}
   m_ConstrainProportionsScale: 0
   m_Children: []
